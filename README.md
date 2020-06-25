@@ -17,7 +17,7 @@ pip install pbixrefresher
 Usage
 -----
 ```
-pbixrefresher <WORKBOOK> [-workspace <WORKSPACE>] [--refresh-timeout <REFRESH_TIMEOUT>] [--no-publish]
+pbixrefresher <WORKBOOK> [-workspace <WORKSPACE>] [--refresh-timeout <REFRESH_TIMEOUT>] [--no-publish] [--screenshot]
 
 where <WORKBOOK> is path to .pbix file
       --workspace <text> is name of online Power BI service work space to publish in (default My workspace)

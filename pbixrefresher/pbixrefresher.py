@@ -12,7 +12,7 @@ def type_keys(string, element):
     for char in string:
         element.type_keys(char)
 
-def main():   
+def main(workbook = "", workspace = "", refreshtimeout = 30000, publish = True, initwait = 15, screenshot = ""):   
 	# Parse arguments from cmd
 	parser = argparse.ArgumentParser()
 	parser.add_argument("workbook", help = "Path to .pbix file")
@@ -22,6 +22,14 @@ def main():
 	parser.add_argument("--init-wait", help = "initial wait time on startup", default = 15, type = int)
 	parser.add_argument("--screenshot", dest='screenshot', help = "filename to save a screenshot from the default dashboard", default = "")
 	args = parser.parse_args()
+
+	if workbook != "":
+		args.workbook = workbook
+		args.workspace = workspace
+		args.refreshtimeout = refreshtimeout
+		args.publish = publish
+		args.init_wait = initwait
+		args.screenshot = screenshot
 
 	timings.after_clickinput_wait = 1
 	WORKBOOK = args.workbook
