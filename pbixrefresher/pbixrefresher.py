@@ -20,6 +20,7 @@ def main():
 	parser.add_argument("--refresh-timeout", help = "refresh timeout", default = 30000, type = int)
 	parser.add_argument("--no-publish", dest='publish', help="don't publish, just save", default = True, action = 'store_false' )
 	parser.add_argument("--init-wait", help = "initial wait time on startup", default = 15, type = int)
+	parser.add_argument("--screenshot", dest='screenshot', help = "filename to save a screenshot from the default dashboard", default = "")
 	args = parser.parse_args()
 
 	timings.after_clickinput_wait = 1

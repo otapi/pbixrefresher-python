@@ -1,6 +1,6 @@
 Power BI refresher
 ======
-Script for automation of refreshing Power BI workbooks.  Built on Python 3.6 and pywinauto.
+Script for automation of refreshing Power BI workbooks.  Built on Python 3.8 and pywinauto.
 
 Developed for Power BI Desktop June 2019 Update (2.70.5494.561) on Windows 10 with English locale.
 
@@ -24,6 +24,7 @@ where <WORKBOOK> is path to .pbix file
       --refresh-timeout <number> is time in seconds to wait to refresh end (default 30000)
       --no-publish is switch to just refresh and save the workbook and skip publishing to online service (default False)
       --init-wait <number> is time to wait until Power BI Desktop starts (default 15)
+      --screenshot <text> is filename to save a screenshot from the default dashboard (default is empty, disabled)
 ```
 
 Scheduling in Windows Task Scheduler
